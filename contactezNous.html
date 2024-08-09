@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-Nous</title>
+    <style>
+        body {
+            font-family: "Raleway", sans-serif;
+            background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(209,186,173) 10%, rgb(209,186,173) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(209,186,173) 10%, rgb(209,186,173) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(209,186,173) 10%, rgb(209,186,173) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(90deg, rgb(209,186,173),rgb(242,230,193)); background-blend-mode:overlay,overlay,overlay,normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .contact-form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h2 {
+            margin-bottom: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e8491d;
+            color: white;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            color: #e8491d;
+            background-color: #fff;
+        }
+        .response-message {
+            margin-top: 10px;
+            font-size: 14px;
+            color: green;
+        }
+        button {
+            background-color: #e8491d;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+        button:hover {
+            scale: 1.1;
+            box-shadow: 5px 5px 10px #000;
+        }
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+        <h2>Contactez-Nous</h2>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+            <textarea id="message" name="message" placeholder="Votre message" rows="4" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <div id="formResponse" class="response-message"></div>
+    </div>
+    <button><a href="/Produits.html">Précédente</a></button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').submit(function(e) {
+                e.preventDefault();
+                const name = $('#name').val();
+                const email = $('#email').val();
+                const message = $('#message').val();
+                if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                    $('#formResponse').text('Veuillez remplir tous les champs du formulaire.');
+                    return;
+                }
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    $('#formResponse').text('Veuillez saisir une adresse e-mail valide.');
+                    return;
+                }
+                $('#formResponse').text('Formulaire envoyé avec succès !');
+                $('#contactForm').trigger('reset');
+            });
+        });
+    </script>
+</body>
+</html>

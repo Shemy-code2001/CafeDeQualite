@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recettes de Café</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(209,186,173) 10%, rgb(209,186,173) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(209,186,173) 10%, rgb(209,186,173) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(209,186,173) 10%, rgb(209,186,173) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(90deg, rgb(209,186,173),rgb(242,230,193)); background-blend-mode:overlay,overlay,overlay,normal;
+            margin: 0; 
+            padding: 0; 
+        }
+        .container { 
+            width: 80%; 
+            margin: auto; 
+            overflow: hidden; 
+        }
+        header { 
+            background: #8c5e3a; 
+            color: white; 
+            padding-top: 30px; 
+            min-height: 70px; 
+            border-bottom: #e8491d 3px solid; 
+        }
+        header a { 
+            color: #ffffff; 
+            text-decoration: none; 
+            text-transform: uppercase; 
+            font-size: 16px; 
+        }
+        header ul { 
+            padding: 0; 
+            list-style: none; 
+        }
+        header li { 
+            float: left; 
+            display: inline; 
+            padding: 0 20px; 
+        }
+        header #branding { 
+            float: left; 
+        }
+        header #branding h1 { 
+            margin: 0; 
+        }
+        header nav { 
+            float: right; 
+            margin-top: 10px; 
+        }
+        header .highlight, header .current a { 
+            color: #e8491d; 
+            font-weight: bold; 
+        }
+        header a:hover { 
+            color: #ffffff; 
+            font-weight: bold; 
+        }
+        h1{
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 50px;
+            color: #000;
+            text-align: center;
+            max-width: 500px;
+        }
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .container1 .image{
+            border: 3px solid #e8491d;
+            width: 300px;
+            height:300px;
+            border-radius: 4px;
+        }
+        .container1 .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: black;
+            color: #ddd;
+            margin: 10px;
+            border-radius: 50px 0 60px 0;
+            box-shadow: 5px 5px 5px black;
+            line-height: 30px;
+            border: 3px solid #e8491d;
+            
+        }
+        hr {
+            border: 0;
+            height: 4px;
+            background: linear-gradient(to right, #50b3a2 0%, #e8491d 100%);
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        hr::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #50b3a2 0%, #e8491d 100%);
+            transform: translateX(-100%);
+            animation: animate-hr 2s forwards ease-in-out infinite;
+        }
+        @keyframes animate-hr {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(50);
+            }
+            100%{
+                transform: translateX(100);
+            }
+        }
+        .container2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .container2 .content {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            border-collapse: collapse;
+            border: 3px solid #e8491d;
+            margin: 10px;
+            background-color: #000;
+            color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 10px 10px 10px #000;
+            line-height: 30px;
+            animation: animate 20s ease-in-out infinite;
+        }
+        @keyframes animate{
+            0%{
+                transform: translateY(0);
+            }
+            25%{
+                transform: translateY(-70px);
+            }
+            50%{
+                transform: translateY(-140px)
+            }
+            75%{
+                transform: translateY(-70px)
+            }
+            100%{
+                transform: translateY(0)
+            }
+        }
+        .container2 .content .image{
+            border-bottom: 3px solid #e8491d;
+            width: 100%;
+            height: 400px;
+        }
+        .container3 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 15px;
+        }
+        .container3 p{
+            font-size: 16px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;
+            width: 400px;
+            height: 150px;
+            line-height: 20px;
+            overflow: scroll;
+            color: white;
+            background-color: #362315;
+            border: 3px solid #e8491d;
+            border-radius: 2px;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 5px #000;
+        }
+        .container3 .img{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container3 img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        .container3 .img h3{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: monospace;
+            color: #e849;
+            background-color: #ffffff;
+        }
+        .title{
+            font-family: 'Arial', sans-serif;
+            font-size: 50px;
+            color: #000;
+            max-width: 500px;
+            margin-left: 50%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #e8491d;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px #000;
+            border: 3px solid #e8491d;
+        }
+        .title:hover{
+            background-color: #ffffff;
+            color: #e8491d;
+            scale: 0.8;
+        }
+        footer {
+            background-color: #8c5e3a;
+            color: white;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+        }
+        .footer-section h3 {
+            margin-bottom: 10px;
+            color: #e8491d;
+        }
+        .footer-section p, .footer-section ul {
+            margin: 0;
+            padding: 0;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer-section ul li a:hover {
+            color: #e8491d;
+        }
+        .footer-section .socials a {
+            margin-right: 10px;
+            text-decoration: none;
+            filter: drop-shadow(5px 5px 5px #000);
+        }
+        .footer-section .socials a:hover{
+            filter: drop-shadow(5px 5px 5px #e8491d);
+        }
+        .footer-section .socials img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #e8491d;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-section {
+                margin: 20px 0;
+            }
+        }
+        .page-transition-enter {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .page-transition-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 1s ease-out, transform 2s ease-out;
+        }
+
+        .page-transition-exit {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .page-transition-exit-active {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        /*  largeur d'écran de 480px */
+
+        @media (max-width: 480px) {
+            .container {
+                width: 90%;
+            }
+            header #branding h1 {
+                font-size: 30px;
+            }
+            header ul {
+                padding: 0 10px;
+            }
+            header li {
+                padding: 0 10px;
+            }
+            header nav {
+                margin-top: 5px;
+            }
+            .title {
+                font-size: 30px;
+            }
+            .container1 .content {
+                width: 100%;
+            }
+            .container1 .image {
+                width: 100%;
+                height: auto;
+            }
+            .container2 .content {
+                width: 100%;
+            }
+            .container2 .image {
+                width: 100%;
+                height: auto;
+            }
+            .container3 p {
+                width: 100%;
+                height: auto;
+                overflow: visible;
+            }
+            .container3 .img h3 {
+                font-size: 16px;
+            }
+            .container3 img {
+                width: 100px;
+                height: 100px;
+            }
+            footer .footer-container {
+                flex-direction: column;
+            }
+        }
+
+        /* largeur d'écran de 768px */
+
+        @media (max-width: 768px) {
+            header {
+                padding-top: 20px;
+                min-height: 50px;
+            }
+            header #branding h1 {
+                font-size: 24px;
+            }
+            header ul {
+                padding: 0 15px;
+            }
+            header li {
+                padding: 0 15px;
+            }
+            header nav {
+                margin-top: 5px;
+            }
+            .container1 .image,
+            .container2 .image {
+                width: 250px;
+                height: 250px;
+            }
+            .container1 .content,
+            .container2 .content {
+                padding: 10px;
+            }
+            .title {
+                font-size: 40px;
+            }
+            .container3 p {
+                width: 300px;
+                height: 150px;
+                overflow: scroll;
+            }
+            .container3 .img h3 {
+                font-size: 18px;
+            }
+            .container3 img {
+                width: 150px;
+                height: 150px;
+            }
+            footer .footer-container {
+                flex-direction: row;
+            }
+            .footer-section {
+                margin: 10px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Shemy</span> Galerie Café</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="/Accueil.html">Accueil</a></li>
+                    <li><a href="/Produits.html">Précédente</a></li>
+                    <li><a href="/CaféDeQualité.html">Café de Qualité</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1 class="title">Les recettes des cafés</h1>
+    <h1>Café Robusta</h1>
+    <div class="container1">
+        <img src="natu.png" alt="" class="image">
+        <div class="content">
+            <h3>Robusta Naturel</h3>
+            <p>1-Récolte  : <br> - Cueillir les cerises de café à maturité.
+                2-Tri : <br> - Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+                3-Séchage : <br>  - Étaler les cerises de café sur des lits de séchage (tables ou patios) en une seule couche. <br> - Remuer régulièrement pour assurer un séchage uniforme et éviter la fermentation non désirée. <br> - Sécher jusqu'à ce que les cerises atteignent une teneur en humidité d'environ 11-12%.
+                4-Décorticage : <br>  - Passer les cerises séchées dans une décortiqueuse pour enlever la pulpe séchée et les parchemins.
+                5-Tri et Classification : <br> - Trier les grains décortiqués pour enlever les débris, les grains défectueux et les impuretés.
+                6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+            </p>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="content">
+            <h3>Robusta Lavé</h3>
+                    <p>1-Récolte  : <br> - Cueillir les cerises de café à maturité.
+                        2-Tri : <br> - Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+                        3-Pulpage : <br>  - Utiliser une machine à pulper pour enlever la pulpe des cerises.
+                        4-Fermentation : <br>   - Fermenter les grains dépulpés dans des cuves d'eau pendant 12 à 48 heures, selon les conditions climatiques. <br> - Vérifier régulièrement pour éviter une fermentation excessive.
+                        5-Tri et Classification : <br> - Trier les grains décortiqués pour enlever les débris, les grains défectueux et les impuretés.
+                        6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+                    </p>
+        </div>
+        <img src="lave.png" alt="" class="image">
+    </div>
+    <div class="container1">
+        <img src="robusta excelsa.jpg" alt="" class="image">
+        <div class="content">
+            <h3>Robusta Excelsa</h3>
+                    <p>1-Récolte  : <br> - Cueillir les cerises de café à maturité. La variété Excelsa peut parfois nécessiter une attention particulière en raison de ses caractéristiques distinctes.
+                        2-Tri : <br> - Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+                        3-Séchage : <br>  - Sécher les grains comme décrit pour le traitement choisi (naturel ou lavé).
+                        4-Décorticage : <br>   - Décortiquer les grains pour enlever les couches externes.
+                        5-Tri et Classification : <br> - Trier les grains décortiqués pour enlever les débris, les grains défectueux et les impuretés.
+                        6-Stockage : <br>  - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+                    </p>
+        </div>
+    </div>
+    <br> <br> <br><br><br><br><br>
+    <hr>
+    <h1>Arabica</h1>
+    <div class="container2">
+        <div class="content">
+            <img class="image" src="870635db-89b2-4e8a-a57a-20e60f04a114-removebg-preview.png" alt="">
+            <div class="par">
+                <h3>Arabica Naturel</h3>
+                <p>1-Récolte  : <br> Les cerises de café mûres sont cueillies à la main.
+                    2-Tri : <br> - Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+                    3-Séchage : <br>  Les cerises entières sont étalées sur des lits de séchage au soleil.
+                    4-Décorticage : <br>  - Passer les cerises séchées dans une décortiqueuse pour enlever la pulpe séchée et les parchemins.
+                    5-Tri et Classification : <br> Les grains sont triés pour éliminer les impuretés et les grains défectueux
+                    6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <img class="image" src="9913f59e29200ebaf2a21832f694686e.jpg" alt="">
+            <div class="par">
+                <h3>Arabica Honey</h3>
+                <p>1-Récolte  : <br> Les cerises de café mûres sont cueillies à la main.
+                    2-Tri : <br> - Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+                    3-Séchage : <br>  Les grains dépulpés avec leur mucilage sont étalés sur des lits de séchage. 
+                    4-Décorticage : <br>  Une fois les grains séchés, ils sont décortiqués pour enlever le parchemin.
+                    5-Tri et Classification : <br>  Les grains sont triés pour éliminer les impuretés et les grains défectueux, puis emballés pour l'expédition.
+                    6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <img class="image" src="b3f3f497421964ede25acafdb5badeb4.jpg" alt="">
+            <div class="par">
+                <h3>Arabica Monsooned </h3>
+                <p>1-Récolte  : <br> Les cerises de café mûres sont cueillies à la main et traitées par voie humide
+                    2-Tri : <br> - Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+                    3-Séchage : <br>   Les grains lavés sont séchés jusqu'à atteindre une teneur en humidité d'environ 11-12%.
+                    4-Décorticage : <br>  Une fois le processus de moussonnage terminé, les grains sont décortiqués pour enlever le parchemin.
+                    5-Tri et Classification : <br> Les grains sont triés pour éliminer les impuretés et les grains défectueux, puis emballés pour l'expédition.
+                    6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br> <br> <br><br><br><br><br>
+    <hr>
+    <h1>Typica</h1>
+    <div class="container3">
+        <p>
+            1-Récotte : <br> Les cerises de café mûres sont cueillies à la main et traitées par voie humide.
+            2-Tri : <br>  Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+            3-Séchage : <br>   Les grains lavés sont séchés jusqu'à atteindre une teneur en humidité d'environ 11-12%.
+        </p>
+        <div class="img">
+            <h3>Java Typica</h3>
+            <img src="typ1.jpg" alt="">
+        </div>
+       
+        <p>
+            4-Décorticage : <br>  Une fois le processus de moussonnage terminé, les grains sont décortiqués pour enlever le parchemin.
+            5-Tri et Classification : <br> Les grains sont triés pour éliminer les impuretés et les grains défectueux, puis emballés pour l'expédition.
+            6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+        </p>
+    </div>
+    <div class="container3">
+        <p>
+            1-Récotte : <br> Les cerises de café mûres sont cueillies à la main et traitées par voie humide.
+            2-Tri : <br>  Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+            3-Séchage : <br>   Les grains lavés sont séchés jusqu'à atteindre une teneur en humidité d'environ 11-12%.
+        </p>
+        <div class="img">
+            <h3>Yemen Mocha Typica</h3>
+            <img src="typ2.jpg" alt="">
+        </div>
+       
+        <p>
+            4-Décorticage : <br>  Une fois le processus de moussonnage terminé, les grains sont décortiqués pour enlever le parchemin.
+            5-Tri et Classification : <br> Les grains sont triés pour éliminer les impuretés et les grains défectueux, puis emballés pour l'expédition.
+            6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+        </p>
+    </div>
+    <div class="container3">
+        <p>
+            1-Récotte : <br> Les cerises de café mûres sont cueillies à la main et traitées par voie humide.
+            2-Tri : <br>  Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+            3-Séchage : <br>   Les grains lavés sont séchés jusqu'à atteindre une teneur en humidité d'environ 11-12%.
+        </p>
+        <div class="img">
+            <h3>Puerto Rican Typica</h3>
+            <img src="typ2.jpg" alt="">
+        </div>
+       
+        <p>
+            4-Décorticage : <br>  Une fois le processus de moussonnage terminé, les grains sont décortiqués pour enlever le parchemin.
+            5-Tri et Classification : <br> Les grains sont triés pour éliminer les impuretés et les grains défectueux, puis emballés pour l'expédition.
+            6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+        </p>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>À Propos</h3>
+                <p>Shemy Galerie Café est votre destination pour les meilleures recettes de café. Nous nous engageons à vous offrir les grains de café les plus savoureux et des conseils de préparation.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="/Accueil.html">Accueil</a></li>
+                    <li><a href="recettes.html">Recettes</a></li>
+                    <li><a href="/CaféQualité.html">Café de Qualité</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contactez-Nous</h3>
+                <p>Email: contact@shemygaleriecafe.com</p>
+                <p>Téléphone: +33 1 23 45 67 89</p>
+                <div class="socials">
+                    <a href="#"><img src="fb.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="x.jpg" alt="Twitter"></a>
+                    <a href="#"><img src="inst.jpg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Shemy Galerie Café. Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('a');
+            const body = document.querySelector('body');
+            const handleTransition = (event) => {
+                event.preventDefault();
+                const target = event.target.href;
+        
+                body.classList.add('page-transition-exit');
+                body.classList.remove('page-transition-enter');
+                
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 500); 
+            };
+            links.forEach(link => {
+                link.addEventListener('click', handleTransition);
+            });
+            body.classList.add('page-transition-enter');
+            setTimeout(() => {
+                body.classList.add('page-transition-enter-active');
+            }, 10); 
+        });
+        </script>
+        
+</body>
+</html>

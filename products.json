@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Robusta Naturel",
+        "price": 3
+    },
+    {
+        "name": "Robusta Lavé",
+        "price": 7
+    },
+    {
+        "name": "Robusta Excelsa",
+        "price": 8.5
+    },
+    {
+        "name": "Arabica Monsooned",
+        "price": 3
+    },
+    {
+        "name": "Arabica Honey",
+        "price": 5
+    },
+    {
+        "name": "Arabica Naturel",
+        "price": 12.5
+    },
+    {
+        "name": "Java Typica",
+        "price":3
+    },
+    {
+        "name": "Yemen Mocha Typica",
+        "price": 8
+    },
+    {
+        "name": "Puerto Rican Typica",
+        "price": 12.5
+    }
+]

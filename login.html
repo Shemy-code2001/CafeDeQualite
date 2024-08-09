@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Connexion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            width: 800px;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e8491d;
+            box-shadow: 3px 3px 3px;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .login-container input[type="submit"] {
+            width: 100%;
+            background-color: #e8491d;
+            color: white;
+            padding: 14px 20px;
+            border: 3px solid #e8491d;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: white;
+            color: #e8491d;
+            border: 3px solid #e8491d;
+        }
+        .img {
+            background-image: url('Image/870635db-89b2-4e8a-a57a-20e60f04a114-removebg-preview.png');
+            width: 400px;
+            height: 470px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        /* Style pour les écrans de taille maximale de 768px */
+@media screen and (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        width: 90%;
+        margin: 50px auto;
+    }
+    .img {
+        width: 100%;
+        height: 300px;
+    }
+    form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-container {
+        margin: 30px auto;
+    }
+    .img {
+        height: 200px;
+    }
+    .login-container h2 {
+        font-size: 24px;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .login-container input[type="submit"] {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="img"></div>
+        <form id="login-form">
+            <h2>Connexion</h2>
+            <label for="email">Email :</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Se connecter">
+        </form>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            fetch('users.json')
+                .then(response => response.json())
+                .then(users => {
+                    const matchedUser = users.find(user => user.email === email && user.mot_de_passe === password);
+                    if (matchedUser) {
+                        localStorage.setItem('loggedIn', 'true');
+                        const targetPage = localStorage.getItem('targetPage');
+                        window.location.href = targetPage ? targetPage : 'Accueil.html';
+                    } else {
+                        alert('Email ou mot de passe incorrect.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Une erreur s\'est produite :', error);
+                });
+        });
+
+    </script>
+</body>
+</html>

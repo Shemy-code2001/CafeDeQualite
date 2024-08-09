@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabica</title>
+    <style>
+        body{
+            font-family: 'Arial', sans-serif; 
+            background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(209,186,173) 10%, rgb(209,186,173) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(209,186,173) 10%, rgb(209,186,173) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(209,186,173) 10%, rgb(209,186,173) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(90deg, rgb(209,186,173),rgb(242,230,193)); background-blend-mode:overlay,overlay,overlay,normal;
+            margin: 0; 
+            padding: 0; 
+        }
+        h1{
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 50px;
+            color: #000;
+            text-align: center;
+            max-width: 500px;
+        }
+        .container2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .container2 .content {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            border-collapse: collapse;
+            border: 3px solid #e8491d;
+            margin: 10px;
+            background-color: #000;
+            color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 10px 10px 10px #000;
+            line-height: 30px;
+            animation: animate 20s ease-in-out infinite;
+        }
+        @keyframes animate{
+            0%{
+                transform: translateY(0);
+            }
+            25%{
+                transform: translateY(-70px);
+            }
+            50%{
+                transform: translateY(-140px)
+            }
+            75%{
+                transform: translateY(-70px)
+            }
+            100%{
+                transform: translateY(0)
+            }
+        }
+        .container2 .content .image{
+            border-bottom: 3px solid #e8491d;
+            width: 100%;
+            height: 400px;
+        }
+        button{
+            background-color: #e8491d;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius :2px;
+        }
+        button:hover{
+            scale: 1.1;
+            box-shadow: 5px 5px 10px #000;
+        }
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arabica</h1>
+    <div class="container2">
+        <div class="content">
+            <img class="image" src="870635db-89b2-4e8a-a57a-20e60f04a114-removebg-preview.png" alt="">
+            <div class="par">
+                <h3>Arabica Naturel</h3>
+                <p>1-Récolte  : <br> Les cerises de café mûres sont cueillies à la main.
+                    2-Tri : <br> - Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+                    3-Séchage : <br>  Les cerises entières sont étalées sur des lits de séchage au soleil.
+                    4-Décorticage : <br>  - Passer les cerises séchées dans une décortiqueuse pour enlever la pulpe séchée et les parchemins.
+                    5-Tri et Classification : <br> Les grains sont triés pour éliminer les impuretés et les grains défectueux
+                    6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <img class="image" src="9913f59e29200ebaf2a21832f694686e.jpg" alt="">
+            <div class="par">
+                <h3>Arabica Honey</h3>
+                <p>1-Récolte  : <br> Les cerises de café mûres sont cueillies à la main.
+                    2-Tri : <br> - Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+                    3-Séchage : <br>  Les grains dépulpés avec leur mucilage sont étalés sur des lits de séchage. 
+                    4-Décorticage : <br>  Une fois les grains séchés, ils sont décortiqués pour enlever le parchemin.
+                    5-Tri et Classification : <br>  Les grains sont triés pour éliminer les impuretés et les grains défectueux, puis emballés pour l'expédition.
+                    6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <img class="image" src="b3f3f497421964ede25acafdb5badeb4.jpg" alt="">
+            <div class="par">
+                <h3>Arabica Monsooned </h3>
+                <p>1-Récolte  : <br> Les cerises de café mûres sont cueillies à la main et traitées par voie humide
+                    2-Tri : <br> - Trier les cerises pour enlever les fruits endommagés ou non mûrs.
+                    3-Séchage : <br>   Les grains lavés sont séchés jusqu'à atteindre une teneur en humidité d'environ 11-12%.
+                    4-Décorticage : <br>  Une fois le processus de moussonnage terminé, les grains sont décortiqués pour enlever le parchemin.
+                    5-Tri et Classification : <br> Les grains sont triés pour éliminer les impuretés et les grains défectueux, puis emballés pour l'expédition.
+                    6-Stockage : <br> - Emballer les grains de café dans des sacs appropriés pour le stockage ou la vente.
+                </p>
+            </div>
+        </div>
+    </div>
+    <button><a href="/Produits.html">Précédente</a></button>
+</body>
+</html>

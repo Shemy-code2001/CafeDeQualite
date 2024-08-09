@@ -1,0 +1,38 @@
+[
+    {
+        "nom": "Alice",
+        "email": "alice@example.com",
+        "mot_de_passe": "motdepasse123",
+        "paiement": "Carte de crédit"
+    },
+    {
+        "nom": "Bob",
+        "email": "bob@example.com",
+        "mot_de_passe": "bobspassword",
+        "paiement": "PayPal"
+    },
+    {
+        "nom": "Charlie",
+        "email": "charlie@example.com",
+        "mot_de_passe": "password123",
+        "paiement": "Virement bancaire"
+    },
+    {
+        "nom": "David",
+        "email": "david@example.com",
+        "mot_de_passe": "davidpass",
+        "paiement": "Carte de débit"
+    },
+    {
+        "nom": "Eve",
+        "email": "eve@example.com",
+        "mot_de_passe": "evemotdepasse",
+        "paiement": "Espèces"
+    },
+    {
+        "nom": "Frank",
+        "email": "frank@example.com",
+        "mot_de_passe": "frankspassword",
+        "paiement": "Chèque"
+    }
+]

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="accueil.css">
+</head>
+<body> 
+        <nav class="navbar">
+            
+            <h1> <mark>Shemy</mark>  <br> Galerie <br> Café</h1>
+            <ul class="navlinks">
+                <li><a href="CaféDeQualité.html">Café De Qualité</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="contactezNous.html">Contactez Nous</a></li>
+                <li><a href="a propos.html">se connecter</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Rechercher..." class="Inpsearch">
+                <button type="button" class="Btnsearch"><i class="bi bi-search"></i></button>
+            </div>
+            <span class="menu-toggle">☰ Menu</span>
+        </nav>
+        <div class="filter">
+            <label for="category">Filtrer par catégorie :</label>
+            <select id="category">
+                <option value="all">Toutes les catégories</option>
+                <option value="arabica">Arabica</option>
+                <option value="robusta">Robusta</option>
+                <option value="typica">Typica</option>
+            </select>
+        </div>
+        <header>
+            <h1>Bievenue sur notre page, vous trouverez une sélection de cafés célèbres et populaires, <br> soigneusement choisie pour offrir à nos clients une expérience gustative incomparable.</h1>
+        </header>
+        <div class="catalogue">
+            <button id="btnCAT" type="button" onclick="demarrerVideo()">Découvrir</button>
+        </div>
+        
+
+
+        <article class="cards">
+            <div class="card card1">
+                <h6>Arabica</h6>
+                <p class="cat">Doux & Fruité</p>
+                <button class="prx">5€ || 20€</button>
+                <button class="promo">10% de réduction sur votre commande </button>
+            </div>
+            <div class="card card2">
+                <h6>Robusta</h6>
+                <p class="cat">Corsé & Intense</p>
+                <button class="prx">3€ || 10€</button>
+                <button class="promo">20% de réduction sur votre commande</button>
+            </div>
+            <div class="card card3">
+                <h6>Typica</h6>
+                <p class="cat">Équilibré & Noiseté</p>
+                <button class="prx">8€ || 25€</button>
+                <button class="promo">une réduction de 15% sur tout achat de café <br> colombien en ligne avec le code promo "COLOMBIA15"</button>
+            </div>
+        </article>
+        
+        <div class="gift">
+            <div class="content">
+                <img src="Image/bow.jpeg" alt="">
+                <p>Découvrez notre sélection de cafés, allant du robuste 
+                    colombien au doux arabica, sur notre site web.</p>
+            </div>
+            <div class="content">
+                <img src="Image/bow.jpeg" alt="">
+                <p>Laissez-vous tenter par les arômes riches et les 
+                    saveurs uniques que nos cafés ont à offrir.</p>
+            </div>
+            <div class="content">
+                <img src="Image/bow.jpeg" alt="">
+                <p>Faites de chaque pause café une expérience exceptionnelle 
+                    avec nos variétés de café de qualité supérieure.</p>
+            </div>
+        </div>
+        <h1 class="titreMenu">Notre Menu</h1>
+
+        <div class="cardsCoffee" id="Menu">
+            <div class="types">
+                <h3>Robusta Naturel</h3>
+                <img src="Image/robusta Naturel.jpg" alt="">
+                <p class="description">Les cerises de café sont séchées au soleil après la récolte.</p>
+                <p class="price">3€</p>
+                <div class="span">
+                    <button class="btns" data-product='{"name": "Robusta Naturel", "price": 3, "image": "Image/robusta Naturel.jpg"}'>Ajouter au panier</button>
+                    <button class="btns"><a href="Produits.html">Plus..</a></button>
+                </div>
+            </div>
+            <div class="types">
+                <h3>Robusta Lavé</h3>
+                <img src="Image/robusta lave.jpg" alt="">
+                <p class="description">Les cerises de café sont dépulpées et fermentées avant d'être séchées.</p>
+                <p class="price">7€</p>
+                <div class="span">
+                    <button class="btns" data-product='{"name": "Robusta Lavé", "price": 7, "image": "Image/robusta lave.jpg"}'>Ajouter au panier</button>
+                    <button class="btns"><a href="Produits.html">Plus..</a></button>
+                </div>
+            </div>
+            <div class="types">
+                <h3>Robusta Excelsa</h3>
+                <img src="Image/robusta excelsa.jpg" alt="">
+                <p class="description">Une sous-espèce de Coffea canephora, souvent considérée comme une variété distincte.</p>
+                <p class="price">8.50€</p>
+                <div class="span">
+                    <button class="btns" data-product='{"name": "Robusta Excelsa", "price": 8.50, "image": "Image/robusta excelsa.jpg"}'>Ajouter au panier</button>
+                    <button class="btns"><a href="Produits.html">Plus..</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="cardsCoffee">
+            <div class="types">
+                <h3>Arabica Monsooned</h3>
+                <img src="Image/arabica monsooned.jpg" alt="">
+                <p class="description">Les grains sont exposés aux vents de mousson, ce qui les fait gonfler et perdre de l'acidité.</p>
+                <p class="price">3€</p>
+                <div class="span">
+                    <button class="btns" data-product='{"name": "Arabica Monsooned", "price": 3, "image": "Image/arabica monsooned.jpg"}'>Ajouter au panier</button>
+                    <button class="btns"><a href="Produits.html">Plus..</a></button>
+                </div>
+                
+            </div>
+            <div class="types">
+                <h3>Arabica Honey</h3>
+                <img src="Image/arabica honey.jpg" alt="">
+                <p class="description">Les cerises sont partiellement dépulpées mais séchées avec une partie de leur mucilage.</p>
+                <p class="price">5€</p>
+                <div class="span">
+                    <button class="btns" data-product='{"name": "Arabica Honey", "price": 5, "image": "Image/arabica honey.jpg"}'>Ajouter au panier</button>
+                    <button class="btns"><a href="Produits.html">Plus..</a></button>
+                </div>
+                
+            </div>
+            <div class="types">
+                <h3>Arabica Naturel</h3>
+                <img src="Image/arabica naturel.jpg" alt="">
+                <p class="description">Les cerises de café sont séchées entières avant d'être décortiquées.</p>
+                <p class="price">12.50€</p>
+                <div class="span">
+                    <button class="btns" data-product='{"name": "Arabica Naturel", "price": 12.50, "image": "Image/arabica naturel.jpg"}'>Ajouter au panier</button>
+                    <button class="btns"><a href="Produits.html">Plus..</a></button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="cardsCoffee">
+            <div class="types">
+                <h3>Java Typica</h3>
+                <img src="Image/typica1.jpg" alt="">
+                <p class="description">Notes épicées et terreuses, profil riche et complexe.</p>
+                <p class="price">3€</p>
+                <div class="span">
+                    <button class="btns" data-product='{"name": "Java Typica", "price": 3, "image": "Image/typica1.jpg"}'>Ajouter au panier</button>
+                    <button class="btns"><a href="Produits.html">Plus..</a></button>
+                </div>
+                
+            </div>
+            <div class="types">
+                <h3>Yemen Mocha Typica</h3>
+                <img src="Image/typica2.jpg" alt="">
+                <p class="description">Saveurs riches et complexes avec des notes de chocolat, de vin et de fruits mûrs.</p>
+                <p class="price">8€</p>
+                <div class="span">
+                    <button class="btns" data-product='{"name": "Yemen Mocha Typica", "price": 8, "image": "Image/typica2.jpg"}'>Ajouter au panier</button>
+                    <button class="btns"><a href="Produits.html">Plus..</a></button>
+                </div>
+                
+            </div>
+            <div class="types">
+                <h3>Puerto Rican Typica</h3>
+                <img src="Image/typica3.jpg" alt="">
+                <p class="description">Saveurs douces et équilibrées, souvent avec des notes de noix et de caramel.</p>
+                <p class="price">12.50€</p>
+                <div class="span">
+                    <button class="btns" data-product='{"name": "Puerto Rican Typica", "price": 12.50, "image": "Image/typica3.jpg"}'>Ajouter au panier</button>
+                    <button class="btns"><a href="Produits.html">Plus..</a></button>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <section class="promotions">
+            <h2>Nos Promotions en Cours</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Promotion</th>
+                        <th>Durée</th>
+                        <th>Jours</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20% de réduction</td>
+                        <td>Jusqu'au 30 juin 2024</td>
+                        <td>Lundi, Mardi, Mercredi</td>
+                        <td>Offre valable sur tous les grains de café entiers.</td>
+                    </tr>
+                    <tr>
+                        <td>Livraison gratuite</td>
+                        <td>Du 1er au 15 juin 2024</td>
+                        <td>Tous les jours</td>
+                        <td>Commandez pour plus de 50€ et obtenez la livraison gratuite.</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-section">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="CaféDeQualité.html">Café De Qualité</a></li>
+                    <li><a href="#Menu">Menu</a></li>
+                    <li><a href="contactezNous.html">Contactez Nous</a></li>
+                    <li><a href="a propos.html">Se connecter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <form class="contact-form">
+                    <input type="text" placeholder="Votre nom" required>
+                    <input type="email" placeholder="Votre email" required>
+                    <textarea placeholder="Votre message" rows="4" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+            <img class="localisation" src="Image/tttt_page-0001.jpg" alt="Tétouan, Maroc">
+        </footer>
+
+
+
+
+    <script>
+        //Recherche
+        function Rechercher(){
+            var Inpsearch = document.querySelector(".Inpsearch");
+            var Btnsearch = document.querySelector(".Btnsearch");
+            var cards = document.querySelectorAll('.cards > div'); 
+            var cardsCoffee = document.querySelectorAll('.cardsCoffee .types');
+
+            Btnsearch.addEventListener("click", function(){
+                var searchTerm = Inpsearch.value.trim().toLowerCase();
+                cards.forEach(function(card) {
+                    card.style.display = "none";
+                });
+                cardsCoffee.forEach(function(type) {
+                    type.style.display = "none";
+                });
+                cards.forEach(function(card){
+                    var title = card.querySelector('h6').textContent.trim().toLowerCase();
+                    if (title === searchTerm) {
+                        card.style.display = "";
+                    }
+                });
+                cardsCoffee.forEach(function(type) {
+                    var title = type.querySelector('h3').textContent.trim().toLowerCase();
+                    if (title.includes(searchTerm)) {
+                        type.style.display = "";
+                    }
+                });
+            });
+        }
+
+        Rechercher();
+
+
+        //Filtrage
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const select = document.getElementById("category");
+            const cardsCoffee = document.querySelectorAll(".cardsCoffee .types");
+
+            select.addEventListener("change", function() {
+                const selectedCategory = select.value.toLowerCase();
+                const filteredCards = [];
+
+                cardsCoffee.forEach(coffee => {
+                    const category = coffee.querySelector('h3').textContent.trim().toLowerCase();
+                    if (selectedCategory === "all" || category.includes(selectedCategory)) {
+                        filteredCards.push(coffee);
+                    }
+                });
+
+                if (filteredCards.length > 0) {
+                    afficherModal(filteredCards);
+                }
+            });
+
+            function afficherModal(cards) {
+                var modal = document.createElement("div");
+                modal.className = "modal";
+                modal.style.position = "fixed";
+                modal.style.top = "50%";
+                modal.style.left = "50%";
+                modal.style.transform = "translate(-50%, -50%)";
+                modal.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+                modal.style.padding = "20px";
+                modal.style.borderRadius = "10px";
+                modal.style.zIndex = "1000";
+                modal.style.height = '80vh';
+                modal.style.overflowY = 'auto';
+                modal.style.width = '80%';
+                modal.style.maxWidth = '600px';
+                modal.style.color = '#fff';
+
+                // Responsive styles
+                modal.style.boxSizing = 'border-box';
+
+                var closeButton = document.createElement("button");
+                closeButton.textContent = "×";
+                closeButton.className = "close";
+                closeButton.style.position = "absolute";
+                closeButton.style.top = "10px";
+                closeButton.style.right = "10px";
+                closeButton.style.backgroundColor = "transparent";
+                closeButton.style.border = "none";
+                closeButton.style.color = "#fff";
+                closeButton.style.fontSize = "24px";
+                closeButton.style.cursor = "pointer";
+                closeButton.addEventListener("click", function() {
+                    document.body.removeChild(modal);
+                });
+                modal.appendChild(closeButton);
+
+                cards.forEach(card => {
+                    var cardContainer = document.createElement("div");
+                    cardContainer.style.marginBottom = "20px";
+                    card.style.width = "100%";
+                    card.style.borderRadius = "10px";
+                    cardContainer.appendChild(card.cloneNode(true));
+                    modal.appendChild(cardContainer);
+                });
+
+                document.body.appendChild(modal);
+                const mediaQuery = window.matchMedia("(max-width: 600px)");
+                function handleScreenResize(e) {
+                    if (e.matches) {
+                        modal.style.width = '95%';
+                        modal.style.height = '90vh';
+                        modal.style.padding = '10px';
+                        closeButton.style.fontSize = '20px';
+                    } else {
+                        modal.style.width = '80%';
+                        modal.style.height = '80vh';
+                        modal.style.padding = '20px';
+                        closeButton.style.fontSize = '24px';
+                    }
+                }
+                mediaQuery.addListener(handleScreenResize);
+                handleScreenResize(mediaQuery);
+            }
+        });
+
+
+
+
+        //Démarrer vidéo
+        function demarrerVideo() {
+            var modal = document.createElement("div");
+            modal.className = "modal";
+            modal.style.position = "fixed";
+            modal.style.top = "50%";
+            modal.style.left = "50%";
+            modal.style.transform = "translate(-50%, -50%)";
+            modal.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+            modal.style.padding = "20px";
+            modal.style.borderRadius = "10px";
+            modal.style.zIndex = "1000";
+            var video = document.createElement("video");
+            video.src = "Image/WhatsApp Vidéo 2024-05-11 à 23.11.19_0b506baa.mp4";
+            video.controls = true;
+            video.style.width = "100%";
+            video.style.maxWidth = "600px";
+            video.style.height = "70vh"
+            video.style.borderRadius = "10px";
+            video.style.display = "block";
+            video.style.margin = "0 auto";
+            modal.appendChild(video);
+            var closeButton = document.createElement("button");
+            closeButton.innerHTML = "&times;";
+            closeButton.className = "close";
+            closeButton.style.position = "absolute";
+            closeButton.style.top = "10px";
+            closeButton.style.right = "10px";
+            closeButton.style.background = "none";
+            closeButton.style.border = "none";
+            closeButton.style.color = "#fff";
+            closeButton.style.fontSize = "24px";
+            closeButton.style.cursor = "pointer";
+            closeButton.addEventListener("click", function() {
+                document.body.removeChild(modal);
+            });
+            modal.appendChild(closeButton);
+            document.body.appendChild(modal);
+            video.play();
+            video.addEventListener("ended", function() {
+                document.body.removeChild(modal);
+            });
+        }
+        var startButton = document.createElement("button");
+        startButton.innerHTML = "Démarrer la vidéo";
+        startButton.addEventListener("click", demarrerVideo);
+        document.body.appendChild(startButton);
+
+
+
+        //navbar
+
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            var links = document.querySelectorAll('.navbar a');
+            for(var i = 0; i < links.length; i++) {
+                links[i].classList.toggle('active');
+            }
+        });
+
+        //tableaux
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const cells = document.querySelectorAll('.promotions td');
+            cells.forEach(cell => cell.classList.add('visible'));
+        });
+
+
+
+
+        //pour l'ajout au panier
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const addToCartButtons = document.querySelectorAll(".btns[data-product]");
+            addToCartButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    const productInfo = JSON.parse(button.getAttribute("data-product"));
+                    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                    cart.push(productInfo);
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    window.location.href = "panier.html";
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
